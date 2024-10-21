@@ -21,7 +21,7 @@ type Product = {
 const apiUrl = 'https://fakestoreapi.com/products';
 const params = { limit: 5, total: 20 };
 
-export const UseFetchMore = ({ theme }: Props) => {
+export const FetchMorePage = ({ theme }: Props) => {
   const { data, error, isLoading, isOver, fetchMore } = useFetchMore(apiUrl, params);
 
   return (
@@ -30,8 +30,8 @@ export const UseFetchMore = ({ theme }: Props) => {
       <div className="main__container">
         <ul className="main__card-list">
           {!error && data.map((item: Product) => (
-            <li className="main__card-item">
-              <article key={item.id} data-theme={theme} className="card">
+            <li key={item.id} className="main__card-item">
+              <article data-theme={theme} className="card">
                 <h2 className="card__title">{item.title}</h2>
                 <span className="card__category">Category: {item.category}</span>
                 <p className="card__description">{item.description.slice(0, 120)}...</p>

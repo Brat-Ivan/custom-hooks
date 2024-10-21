@@ -38,7 +38,8 @@
   transition: opacity 0.3s, color 0.3s;
 }
 
-.menu__link:active {
+.menu__link:active,
+.menu__link--active {
   color: var(--color-accent);
 }
 

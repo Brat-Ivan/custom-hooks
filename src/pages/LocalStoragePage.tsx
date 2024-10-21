@@ -5,7 +5,7 @@ type Props = {
   theme: string,
 }
 
-export const UseLocalStoragePage = ({ theme }: Props) => {
+export const LocalStoragePage = ({ theme }: Props) => {
   const [inputValue, setInputValue] = useState('');
 
   const { value: name, updateValue: setName, removeValue: removeName } = useLocalStorage('name', inputValue);

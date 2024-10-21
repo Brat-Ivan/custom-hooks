@@ -4,7 +4,7 @@ type Props = {
   theme: string,
 };
 
-export const UseInputPage = ({ theme }: Props) => {
+export const InputPage = ({ theme }: Props) => {
   const username = useInput('', { minLengthValue: 4, maxLengthValue: 20 });
 
   return (

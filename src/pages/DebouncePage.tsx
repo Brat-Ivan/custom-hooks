@@ -5,7 +5,7 @@ type Props = {
   theme: string,
 };
 
-export const UseDebouncePage = ({ theme }: Props) => {
+export const DebouncePage = ({ theme }: Props) => {
   const [inputValue, setInputValue] = useState('');
 
   const term = useDebounce(inputValue, 300);

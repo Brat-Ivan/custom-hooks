@@ -1,23 +1,23 @@
 import { useEffect, useState } from 'react';
 
-type Options = {
+type OptionsType = {
   limit?: number,
   total?: number,
 };
 
-export const useFetchMore = (url: string, options?: Options) => {
-  const limit = options?.limit ? options.limit : 10;
-  const total = options?.total ? options.total : null;
+export const useFetchMore = (url: string, options?: OptionsType) => {
+  const limit = options?.limit || 10;
+  const total = options?.total || null;
 
   const [data, setData] = useState([]);
 
   const [loadingLimit, setLoadingLimit] = useState(limit);
 
-  const [isOver, setIsOver] = useState(false)
+  const [isOver, setIsOver] = useState(false);
 
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const [error, setError] = useState<Error | undefined>(undefined);
+  const [error, setError] = useState<Error | undefined>();
 
   useEffect(() => {
     setIsLoading(true);

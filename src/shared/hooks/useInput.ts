@@ -14,8 +14,8 @@ export const useInput = (initialValue: string, options?: Options) => {
   const clear = () => setValue('');
 
   const onBlurValidation = () => {
-    const minLengthValue = options?.minLengthValue;
-    const maxLengthValue = options?.maxLengthValue;
+    const minLengthValue = options?.minLengthValue || 0;
+    const maxLengthValue = options?.maxLengthValue || 0;
 
     if (!value) {
       setError('The field should not be empty');

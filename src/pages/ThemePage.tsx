@@ -3,7 +3,7 @@ type Props = {
   toggleTheme: (theme: string) => void;
 };
 
-export const UseThemePage = ({ theme, toggleTheme }: Props) => {
+export const ThemePage = ({ theme, toggleTheme }: Props) => {
   return (
     <>
       <h1 data-theme={theme} className="main__title">useTheme</h1>
